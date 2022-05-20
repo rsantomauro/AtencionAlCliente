@@ -1,0 +1,74 @@
+
+package obligatorio;
+
+/**
+ *
+ * @author Rodrigo Andre Santomauro Lema (199089)
+ */
+public class Oferta implements Comparable<Oferta> {
+    private Local local;
+    private Articulo articulo;
+    private String textoDescriptivo;
+    private int valor;
+    private int mesDeVigencia;
+    private String responsable;
+    
+    public Local getLocal(){
+        return local;
+    }
+    
+    public void setLocal(Local unLocal){
+        this.local = unLocal;
+    }
+    
+    public Articulo getArticulo(){
+        return articulo;
+    }
+    
+    public void setArticulo(Articulo unArticulo){
+        this.articulo = unArticulo;
+    }
+    
+    public String getTextoDescriptivo(){
+        return textoDescriptivo;
+    }
+    
+    public void setTextoDescriptivo(String unTextoDescriptivo){
+        this.textoDescriptivo = unTextoDescriptivo;
+    }
+    
+    public int getValor(){
+        return valor;
+    }
+    
+    public void setValor(int unValor){
+        this.valor = unValor;
+    }
+    
+    public int getMesDeVigencia(){
+        return mesDeVigencia;
+    }
+    
+    public void setMesDeVigencia(int unMesDeVigencia){
+        this.mesDeVigencia = unMesDeVigencia;
+    }
+    
+    public String getResponsable(){
+        return this.responsable;
+    }
+    
+    public void setResponsable(String unResponsable){
+        this.responsable = unResponsable;
+    }
+    
+    @Override
+    public String toString(){
+        return "El local es: " + this.local + "\nEl articulo es: " + this.articulo + "\nDescripcion: " + this.textoDescriptivo + "\nSu valor es: " + this.valor + "\nSu mes de vigencia es: " + this.mesDeVigencia + "\n";
+    }   
+    
+    @Override
+    public int compareTo(Oferta valor) {
+        return this.getValor() - this.valor;
+    }
+}
+
